@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AddDepartureInformationFragment"
+            android:id="@+id/frameLayout">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_plate" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:hint="Tablice"
+                app:layout_constraintVertical_bias="0.120000005"/>
+        <ImageButton
+                android:src="@drawable/ic_menu_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_plate"
+                app:layout_constraintTop_toTopOf="@+id/editText_plate"
+                app:layout_constraintStart_toEndOf="@+id/editText_plate" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+        <EditText
+                android:lines="8"
+                android:minLines="6"
+                android:gravity="top|left"
+                android:layout_width="232dp"
+                android:layout_height="132dp"
+                android:id="@+id/textView_additionalInformation" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/editText_plate"
+                android:hint="Dodatkowe Informacje"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/departureFragment">
+
+    <fragment android:id="@+id/departureFragment" android:name="pl.com.patryk.parcar.DepartureFragment"
+              android:label="departure_fragment" tools:layout="@layout/departure_fragment"
+    >
+        <action android:id="@+id/action_departureFragment_to_addDepartureFragment"
+                app:destination="@id/addDepartureFragment"/>
+        <action android:id="@+id/action_departureFragment_to_namedFragment" app:destination="@id/namedFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/addDepartureFragment" android:name="pl.com.patryk.parcar.AddDepartureFragment"
+              android:label="fragment_add_departure" tools:layout="@layout/fragment_add_departure">
+
+        <action android:id="@+id/action_addDepartureFragment_to_departureFragment"
+                app:destination="@id/departureFragment"
+                app:popUpTo="@+id/addDepartureFragment"
+                app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_addDepartureFragment_to_departureOptionsDialog"
+                app:destination="@id/departureOptionsDialog">
+            <argument android:defaultValue="1" android:name="departureId"/>
+        </action>
+    </fragment>
+    <fragment android:id="@+id/namedFragment" android:name="pl.com.patryk.parcar.views.NamedFragment"
+              android:label="NamedFragment"/>
+    <fragment android:id="@+id/departureOptionsDialog" android:name="pl.com.patryk.parcar.views.DepartureOptionsDialog"
+              android:label="DepartureOptionsDialog">
+
+        <argument android:name="departureId" app:argType="integer"/>
+    </fragment>
+</navigation>

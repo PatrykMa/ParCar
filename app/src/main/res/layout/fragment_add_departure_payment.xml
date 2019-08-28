@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable name="price" type="String"/>
+        <variable name="isPay" type="Boolean"/>
+        <variable name="onPriceEdit" type="android.text.TextWatcher"/>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AddDeparturePaymentFragment"
+            android:id="@+id/frameLayout3" android:elevation="10dp">
+        <androidx.cardview.widget.CardView
+                android:layout_width="177dp"
+                android:layout_height="67dp" android:padding="4dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:elevation="10dp"
+                app:layout_constraintHorizontal_bias="0.12" app:layout_constraintVertical_bias="0.19"
+                android:id="@+id/cardView2">
+            <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spinner_paymentFormList" android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <Switch
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_width="134dp"
+                android:layout_height="73dp"
+                android:id="@+id/switch1" android:textOn="Zapłacono"
+                android:textOff="Nie Zapłacono" android:showText="false" android:text="Zapłacono"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" android:layout_marginTop="8dp"/>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="8sp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView2" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/cardView2"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView2" android:layout_marginEnd="8dp">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:text="Cena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView8"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:text="50"
+                        android:ems="10"
+                        android:id="@+id/editText_price"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

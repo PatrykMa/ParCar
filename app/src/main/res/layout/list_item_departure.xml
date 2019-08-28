@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+        <variable
+                name="departure"
+                type="pl.com.patryk.parcar.data.Departure"/>
+    </data>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="10">
+            <TextView
+                    android:text="@{departure.getToDate()}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_date"/>
+            <TextView
+                    android:text="@{departure.plate}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/text_plate"/>
+        </LinearLayout>
+        <TextView
+                android:text="@{departure.price.toString()}"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/text_price" android:layout_weight="9"
+                android:textAlignment="center" android:textAllCaps="false" android:gravity="center"/>
+        <ImageButton
+                android:onClick="@{clickListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_edit"
+                android:id="@+id/imageButton" android:layout_weight="1"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,477 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/AndroidStudioProjects/example/demo_android_livedata_illustration" />
+        <option value="$USER_HOME$/AndroidStudioProjects/example/DataBindExample" />
+        <option value="$USER_HOME$/AndroidStudioProjects/WiFiConectionExample" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabReceipt" />
+        <option value="$USER_HOME$/AndroidStudioProjects/example/ViewFlipper" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabSTX" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabWaiter2" />
+        <option value="$USER_HOME$/AndroidStudioProjects/examples/androidmvp-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/examples/Android-Clean-Boilerplate-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/examples/Android-CleanArchitecture-Kotlin-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ROOMTesting" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotificationVisibility" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotyficationStyle" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotyficationStartSpecialActivity" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotyficationStartActivity" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotyficationProgressBar" />
+        <option value="$USER_HOME$/AndroidStudioProjects/TestKo" />
+        <option value="$USER_HOME$/AndroidStudioProjects/pdfGen" />
+        <option value="$USER_HOME$/AndroidStudioProjects/pdfGenerate" />
+        <option value="$USER_HOME$/AndroidStudioProjects/NotyficationReplay" />
+        <option value="$USER_HOME$/AndroidStudioProjects/MediaSession" />
+        <option value="$USER_HOME$/AndroidStudioProjects/Fibo" />
+        <option value="$USER_HOME$/AndroidStudioProjects/kotlin" />
+        <option value="$USER_HOME$/AndroidStudioProjects/elzabUSBComunication" />
+        <option value="$USER_HOME$/AndroidStudioProjects/sample-usbenum-master/kotlin" />
+        <option value="$USER_HOME$/AndroidStudioProjects/sample-usbenum-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/LauncherGit" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabCalculator" />
+        <option value="$USER_HOME$/AndroidStudioProjects/android-DeviceOwner-b1759f920d3e9bccff368c9f4d1990e71cc6244a" />
+        <option value="$USER_HOME$/AndroidStudioProjects/android-anko-sample-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/testOwnera" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabLuncher" />
+        <option value="$USER_HOME$/AndroidStudioProjects/setDeviceOvner" />
+        <option value="$USER_HOME$/AndroidStudioProjects/android-DeviceOwner-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabLauncherWitchScreen" />
+        <option value="$USER_HOME$/AndroidStudioProjects/android-kiosk-mode-master" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabWaiter2witch module" />
+        <option value="$USER_HOME$/AndroidStudioProjects/ElzabWaiter" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/AndroidStudioProjects/example/DataBindExample" />
+        <option value="$USER_HOME$/AndroidStudioProjects/example/demo_android_livedata_illustration" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/AndroidStudioProjects/example/demo_android_livedata_illustration" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabCalculator">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1538757781329" />
+              <option name="buildTimestamp" value="1528133431109" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabLauncherWitchScreen">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537798779354" />
+              <option name="buildTimestamp" value="1528133417356" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabLuncher">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537949265208" />
+              <option name="buildTimestamp" value="1528133411528" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabReceipt">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1558080818759" />
+              <option name="buildTimestamp" value="1539049466880" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabSTX">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1551182469018" />
+              <option name="buildTimestamp" value="1539049461127" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabWaiter">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1532330313685" />
+              <option name="buildTimestamp" value="1528133435330" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabWaiter2">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1550583336535" />
+              <option name="buildTimestamp" value="1539049451942" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ElzabWaiter2witch module">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1536934412816" />
+              <option name="buildTimestamp" value="1528133452111" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/Fibo">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1542973481201" />
+              <option name="buildTimestamp" value="1528133444576" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/LauncherGit">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539007563587" />
+              <option name="buildTimestamp" value="1528133457387" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/MediaSession">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1545374719729" />
+              <option name="buildTimestamp" value="1539049473177" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotificationVisibility">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546960848638" />
+              <option name="buildTimestamp" value="1539049477781" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotyficationProgressBar">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546589245442" />
+              <option name="buildTimestamp" value="1539049475938" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotyficationReplay">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1545386358287" />
+              <option name="buildTimestamp" value="1539049473177" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotyficationStartActivity">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546612384114" />
+              <option name="buildTimestamp" value="1539049475938" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotyficationStartSpecialActivity">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546948618356" />
+              <option name="buildTimestamp" value="1539049477781" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/NotyficationStyle">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546949313236" />
+              <option name="buildTimestamp" value="1539049477781" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/ROOMTesting">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1549869368183" />
+              <option name="buildTimestamp" value="1539049442337" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/TestKo">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546582073821" />
+              <option name="buildTimestamp" value="1539049446419" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/WiFiConectionExample">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1563357033309" />
+              <option name="buildTimestamp" value="1539049471350" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/android-DeviceOwner-b1759f920d3e9bccff368c9f4d1990e71cc6244a">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1538754977450" />
+              <option name="buildTimestamp" value="1528133458736" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/android-DeviceOwner-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537945778220" />
+              <option name="buildTimestamp" value="1528133458610" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/android-anko-sample-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1538486181437" />
+              <option name="buildTimestamp" value="1528133400007" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/android-kiosk-mode-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537449281146" />
+              <option name="buildTimestamp" value="1528133434774" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/elzabUSBComunication">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539015534227" />
+              <option name="buildTimestamp" value="1528133423958" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/example/DataBindExample">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1564035598006" />
+              <option name="buildTimestamp" value="1539049460911" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/example/ViewFlipper">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1558080795143" />
+              <option name="buildTimestamp" value="1539049466880" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/example/demo_android_livedata_illustration">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1564035598006" />
+              <option name="buildTimestamp" value="1539049460911" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/examples/Android-Clean-Boilerplate-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1549882973058" />
+              <option name="buildTimestamp" value="1539049458941" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/examples/Android-CleanArchitecture-Kotlin-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1549882015630" />
+              <option name="buildTimestamp" value="1539049458941" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/examples/androidmvp-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1550582622373" />
+              <option name="buildTimestamp" value="1539049448624" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/kotlin">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539697285560" />
+              <option name="buildTimestamp" value="1528133455391" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/pdfGen">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546431725303" />
+              <option name="buildTimestamp" value="1539049471855" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/pdfGenerate">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1546423251900" />
+              <option name="buildTimestamp" value="1539049497849" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/sample-usbenum-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539009542599" />
+              <option name="buildTimestamp" value="1528133423958" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/sample-usbenum-master/kotlin">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1539010214152" />
+              <option name="buildTimestamp" value="1528133423958" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/setDeviceOvner">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537948463000" />
+              <option name="buildTimestamp" value="1528133458610" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/testOwnera">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-173.4819257" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1537962202475" />
+              <option name="buildTimestamp" value="1528133439146" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/AndroidStudioProjects/example" />
+  </component>
+</application>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
