@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    <variable name="plate" type="String"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text='@{"Co chcesz zrobić z samochodem " +plate }'
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView_title" android:textSize="24sp"
+                android:layout_margin="8dp" android:gravity="center"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/material_text_button_edit"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edytuj" android:layout_margin="8dp"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/material_text_button_delete"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="usuń" android:layout_margin="8dp"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/material_text_button_cancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Anuluj" android:layout_margin="8dp"/>
+
+    </LinearLayout>
+</layout>

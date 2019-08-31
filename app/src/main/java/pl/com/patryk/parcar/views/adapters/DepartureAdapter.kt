@@ -31,7 +31,7 @@ class DepartureAdapter: ListAdapter<Departure, DepartureAdapter.ViewHolder>(Depa
     private fun createOnClickListener(departure: Departure):View.OnClickListener
     {
         return View.OnClickListener {
-            val direction = AddDepartureFragmentDirections.actionAddDepartureFragmentToDepartureOptionsDialog(departure.id!!)
+            val direction = DepartureFragmentDirections.actionDepartureFragmentToDepartureOptionsDialog(departure.id!!,departure.plate!!)
             it.findNavController().navigate(direction)
         }
     }
@@ -42,9 +42,11 @@ class DepartureAdapter: ListAdapter<Departure, DepartureAdapter.ViewHolder>(Depa
         fun bind(listener: View.OnClickListener,item:Departure)
         {
             binding.apply {
-                clickListener = listener
+                imageButtonEdit.setOnClickListener(listener)
                 departure = item
                 executePendingBindings()
+
+
             }
         }
     }

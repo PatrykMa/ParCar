@@ -12,12 +12,12 @@ class Departure(
     var id:Int? = null,
     var from:Long? = null,
     var to:Long? = null,
-    var paymentForm:String? = null,
-    var plate:String? = null,
-    var additionalInformatioin:String? = null,
+    var paymentForm:String? = "",
+    var plate:String? = "",
+    var additionalInformatioin:String? = "",
     var price:Int? = null,
-    var isPaid:Boolean? = null,
-    var isPresent:Boolean? = null
+    var isPaid:Boolean? = false,
+    var isPresent:Boolean? = true
 ){
     fun fromReadable():String{
         return  ""

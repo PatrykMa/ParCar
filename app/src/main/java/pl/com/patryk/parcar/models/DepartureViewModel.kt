@@ -12,7 +12,7 @@ class DepartureViewModel internal constructor(departureRepository:DepartureRepos
 
     private val filter = MutableLiveData<String>().apply { value = "" }
 
-    val departures:LiveData<List<Departure>> = departureRepository.getDepartures()
+    val departures:LiveData<List<Departure>> = departureRepository.getPresentDeparture()
 
     fun setSearch(filter:String)
     {

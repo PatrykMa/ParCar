@@ -24,11 +24,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_addDepartureFragment_to_departureOptionsDialog">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -50,6 +45,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_departureFragment_to_departureOptionsDialog">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_departureFragment_to_namedFragment">
                               <value>
                                 <LayoutPositions />
@@ -65,8 +65,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="702" />
-                            <option name="y" value="54" />
+                            <option name="x" value="404" />
+                            <option name="y" value="-314" />
                           </Point>
                         </option>
                       </LayoutPositions>

@@ -10,6 +10,8 @@
         <action android:id="@+id/action_departureFragment_to_addDepartureFragment"
                 app:destination="@id/addDepartureFragment"/>
         <action android:id="@+id/action_departureFragment_to_namedFragment" app:destination="@id/namedFragment"/>
+        <action android:id="@+id/action_departureFragment_to_departureOptionsDialog"
+                app:destination="@id/departureOptionsDialog"/>
     </fragment>
 
     <fragment android:id="@+id/addDepartureFragment" android:name="pl.com.patryk.parcar.AddDepartureFragment"
@@ -19,16 +21,14 @@
                 app:destination="@id/departureFragment"
                 app:popUpTo="@+id/addDepartureFragment"
                 app:popUpToInclusive="true"/>
-        <action android:id="@+id/action_addDepartureFragment_to_departureOptionsDialog"
-                app:destination="@id/departureOptionsDialog">
-            <argument android:defaultValue="1" android:name="departureId"/>
-        </action>
     </fragment>
     <fragment android:id="@+id/namedFragment" android:name="pl.com.patryk.parcar.views.NamedFragment"
               android:label="NamedFragment"/>
-    <fragment android:id="@+id/departureOptionsDialog" android:name="pl.com.patryk.parcar.views.DepartureOptionsDialog"
+    <dialog android:id="@+id/departureOptionsDialog" android:name="pl.com.patryk.parcar.views.DepartureOptionsDialog"
               android:label="DepartureOptionsDialog">
 
         <argument android:name="departureId" app:argType="integer"/>
-    </fragment>
+        <argument android:name="plate" app:argType="string"/>
+
+    </dialog>
 </navigation>

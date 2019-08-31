@@ -5,6 +5,7 @@ import pl.com.patryk.parcar.data.AppDatabase
 import pl.com.patryk.parcar.data.DepartureRepository
 import pl.com.patryk.parcar.models.AddDepartureViewModel
 import pl.com.patryk.parcar.models.AddDepartureViewModelFactory
+import pl.com.patryk.parcar.models.DepartureOptionsDialogFragmentViewModelFactory
 import pl.com.patryk.parcar.models.DepartureViewModelFactory
 
 object InjectorUtils
@@ -24,5 +25,10 @@ object InjectorUtils
     fun provideAddDepartureViewModelFactory(context: Context): AddDepartureViewModelFactory
     {
         return AddDepartureViewModelFactory(AppDatabase.getInstance(context))
+    }
+
+    fun provideDepartureOptionsDialogFragmentFactory(context: Context): DepartureOptionsDialogFragmentViewModelFactory
+    {
+        return DepartureOptionsDialogFragmentViewModelFactory(getDepartureRepository(context))
     }
 }

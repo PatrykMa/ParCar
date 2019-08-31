@@ -1,10 +1,7 @@
 package pl.com.patryk.parcar.data
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 
 @Dao
@@ -15,8 +12,8 @@ interface DepartureDao {
     @Query("SELECT * FROM departure WHERE isPresent ORDER BY 'to'")
     fun getPresentDepartures(): LiveData<List<Departure>>
 
-    @Query("SELECT * FROM departure WHERE id = :departureId")
-    fun getDeparture(departureId: Int): LiveData<Departure>
+    @Query("SELECT * FROM departure WHERE id = :id LIMIT 1")
+    fun getDeparture(id: Int?): Departure
 
     //TODO poprawić zapytanie o isPresent
     @Query("SELECT * FROM departure WHERE plate like :filter OR additionalInformatioin like :filter" )
@@ -24,4 +21,7 @@ interface DepartureDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(departures: List<Departure>)
+
+    @Update
+    fun update(departure: Departure)
 }
