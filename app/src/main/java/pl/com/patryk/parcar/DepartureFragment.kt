@@ -52,7 +52,7 @@ class DepartureFragment : NamedFragment() {
         super.onResume()
         addButton.setOnClickListener {
            findNavController().navigate(R.id.action_departureFragment_to_addDepartureFragment)
-        }
+    }
     }
 
 

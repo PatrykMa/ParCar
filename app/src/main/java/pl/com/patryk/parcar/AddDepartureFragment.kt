@@ -12,12 +12,15 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_add_departure.*
 import pl.com.patryk.parcar.models.AddDepartureViewModel
 import pl.com.patryk.parcar.utilites.InjectorUtils
+import pl.com.patryk.parcar.views.DepartureOptionsDialogArgs
 
 class AddDepartureFragment : Fragment() {
 
+    private val args: AddDepartureFragmentArgs by navArgs()
     private val viewModel: AddDepartureViewModel by viewModels {
         InjectorUtils.provideAddDepartureViewModelFactory(requireContext())
     }
@@ -25,6 +28,7 @@ class AddDepartureFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewModel.setDeparture(args.departureId)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_departure, container, false)
 

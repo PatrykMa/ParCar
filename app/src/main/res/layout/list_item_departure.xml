@@ -30,7 +30,7 @@
                     android:layout_height="match_parent" android:id="@+id/text_plate"/>
         </LinearLayout>
         <TextView
-                android:text="@{departure.price.toString()}"
+                android:text="@={`` + departure.price}"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" android:id="@+id/text_price" android:layout_weight="9"
                 android:textAlignment="center" android:textAllCaps="false" android:gravity="center"/>

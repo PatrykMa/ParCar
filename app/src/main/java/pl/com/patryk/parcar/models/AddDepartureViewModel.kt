@@ -5,7 +5,6 @@ import org.jetbrains.anko.doAsync
 import pl.com.patryk.parcar.data.AppDatabase
 import pl.com.patryk.parcar.data.Departure
 import pl.com.patryk.parcar.data.PaymentForm
-import java.text.SimpleDateFormat
 import java.util.*
 
 class AddDepartureViewModel internal constructor(
@@ -13,49 +12,58 @@ class AddDepartureViewModel internal constructor(
 
     companion object {
 
-    val departure= Departure().apply {
-        price = 50_00
-        from = Calendar.getInstance().time.time
-        to = Calendar.getInstance().time.time + 604800_000 //add oe week
+    var _departure= Departure().apply {
+        initDeparture()
     }
+        fun initDeparture()
+        {
+            _departure = Departure().apply {
+                price = 50_00
+                from = Calendar.getInstance().time.time
+                to = Calendar.getInstance().time.time + 604800_000 //add oe week
+            }
+        }
     }
+    private val mutableDeparture = MutableLiveData<Departure>().apply { value= _departure }
+    val departure:LiveData<Departure> = mutableDeparture
     var price
-        get() = departure.price
+        get() = _departure.price
         set(value) {
-            departure.price = value}
+            _departure.price = value}
 
     var plate :String
-        get() {return departure.plate?:""}
-        set(value) { departure.plate = value}
+        get() {return _departure.plate?:""}
+        set(value) { _departure.plate = value}
 
     var additionalInformation:String
-        get() { return departure.additionalInformatioin ?: ""}
-        set(value) { departure.additionalInformatioin = value}
-    private var _from = MutableLiveData<Long>(departure.from)
+        get() { return _departure.additionalInformatioin ?: ""}
+        set(value) { _departure.additionalInformatioin = value}
+    private var _from = MutableLiveData<Long>(_departure.from)
     var from:Long
-        get() {return departure.from?: 0}
+        get() {return _departure.from}
         set(value) {_from.postValue(value)
-        departure.from = value}
-    private var _to = MutableLiveData<Long>(departure.to)
+        _departure.from = value}
+    private var _to = MutableLiveData<Long>(_departure.to)
     var to:Long
-        get() {return departure.to?: 0}
-        set(value) {_to.postValue(value)
-            departure.to = value}
+        get() {return _departure.to}
+        set(value) {
+            _to.postValue(value)
+            _departure.to = value}
     var toTime
-        get() = departure.getToTime()
+        get() = _departure.getToTime()
         private set(value) {}
     var toDate
-        get() =  departure.getToDate()
+        get() =  _departure.getToDate()
         private set(value) {}
     var fromTime
-        get() = departure.getFromTime()
+        get() = _departure.getFromTime()
         private set(value) {}
     var fromDate
-        get() =  departure.getFromDate()
+        get() =  _departure.getFromDate()
         private set(value) {}
     var paymentForm:String
-        get() {return departure.paymentForm?: ""}
-        set(value) {departure.paymentForm = value }
+        get() {return _departure.paymentForm?: ""}
+        set(value) {_departure.paymentForm = value }
 
 
     val paymentForms:LiveData<Array<String>> = Transformations.map(database.paymentFormDao().getPaymentsForms(), ::t);
@@ -67,11 +75,24 @@ class AddDepartureViewModel internal constructor(
     {
 
         doAsync {
-            departure.let {
+            _departure.let {
                 database.departureDao().insertAll(listOf(it))
             }
         }
 
+    }
+
+    fun setDeparture(id:Int)
+    {
+        if (id == 0)
+            initDeparture()
+        else
+        doAsync {
+
+            _departure = database.departureDao().getDeparture(id)
+
+            mutableDeparture.postValue(_departure)
+        }
     }
 
 

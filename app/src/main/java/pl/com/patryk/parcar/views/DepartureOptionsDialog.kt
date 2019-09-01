@@ -12,7 +12,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import pl.com.patryk.parcar.DepartureFragmentDirections
 import pl.com.patryk.parcar.R
 import pl.com.patryk.parcar.databinding.DepartureDialogFragmentBinding
 import pl.com.patryk.parcar.databinding.FragmentAddDepartureInformationBinding
@@ -58,6 +61,10 @@ class DepartureOptionsDialog: DialogFragment() {
         binding.materialTextButtonDelete.setOnClickListener {
             viewModel.deleteDeparture(args.departureId)
             dismiss()
+        }
+        binding.materialTextButtonEdit.setOnClickListener {
+            val direction = DepartureOptionsDialogDirections.actionDepartureOptionsDialogToAddDepartureFragment(args.departureId)
+            findNavController().navigate(direction)
         }
         // Do all the stuff to initialize your custom view
 

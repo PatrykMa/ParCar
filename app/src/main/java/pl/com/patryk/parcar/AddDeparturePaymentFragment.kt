@@ -35,6 +35,11 @@ class AddDeparturePaymentFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        setDepartureObserver()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,9 +48,11 @@ class AddDeparturePaymentFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate<FragmentAddDeparturePaymentBinding>(inflater,R.layout.fragment_add_departure_payment, container, false)
         //ToDO zastąpić
-        //binding.departure = viewModel.departure.value
+        //binding._departure = viewModel._departure.value
         subscribeUI()
         setPriceChangeListener()
+        setSpinnerListener()
+
         return binding.root
 
     }
@@ -91,6 +98,16 @@ class AddDeparturePaymentFragment : Fragment() {
 
             }
         })
+    }
+
+    private fun setDepartureObserver()
+    {
+        viewModel.departure.observe(viewLifecycleOwner){
+            binding.price = it.price!!.toString()
+            binding.spinnerPaymentFormList.setSelection(viewModel.paymentForms.value!!.indexOf(it.paymentForm))
+            //toDO set isPay
+        }
+        var x =0
     }
 
 

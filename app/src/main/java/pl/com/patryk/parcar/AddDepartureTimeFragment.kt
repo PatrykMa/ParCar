@@ -23,6 +23,7 @@ import java.util.*
 import android.R.attr.startYear
 import android.app.TimePickerDialog
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import com.google.android.material.textview.MaterialTextView
 import pl.com.patryk.parcar.utilites.InjectorUtils
 
@@ -48,6 +49,7 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         binding = DataBindingUtil.inflate<FragmentAddDepartureTimeBinding>(inflater,R.layout.fragment_add_departure_time, container, false)
         binding.model = viewModel
         setListener()
+        setDepartureObserver()
         return binding.root
     }
 
@@ -70,14 +72,14 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         val calendar = Calendar.getInstance()
         if (isLastFrom) {
-            calendar.time.time = viewModel.from!!
+            calendar.timeInMillis = viewModel.from
             calendar.set(Calendar.YEAR,year)
             calendar.set(Calendar.MONTH,month)
             calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
-            viewModel?.from = calendar.timeInMillis
+            viewModel.from = calendar.timeInMillis
         }
         else{
-            calendar.time.time = viewModel.to!!
+            calendar.timeInMillis = viewModel.to
             calendar.set(Calendar.YEAR,year)
             calendar.set(Calendar.MONTH,month)
             calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
@@ -89,14 +91,13 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         val calendar = Calendar.getInstance()
         if (isLastFrom) {
-            calendar.time.time = viewModel.from!!
+            calendar.timeInMillis = viewModel.from
             calendar.set(Calendar.HOUR_OF_DAY,hourOfDay)
             calendar.set(Calendar.MINUTE,minute)
             viewModel.from = calendar.timeInMillis
         }
         else{
-            calendar.time.time = viewModel.to!!
-            calendar.time.time = viewModel.from!!
+            calendar.timeInMillis = viewModel.to
             calendar.set(Calendar.HOUR_OF_DAY,hourOfDay)
             calendar.set(Calendar.MINUTE,minute)
             viewModel.to = calendar.timeInMillis
@@ -110,11 +111,11 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         val dateFormat = SimpleDateFormat("yy:MM:dd")
         val timeFormat = SimpleDateFormat("hh:mm")
 
-        binding.fromDate = dateFormat.format(viewModel.departure.value?.from)
-        binding.fromTime = timeFormat.format(viewModel.departure.value?.from)
+        binding.fromDate = dateFormat.format(viewModel._departure.value?.from)
+        binding.fromTime = timeFormat.format(viewModel._departure.value?.from)
 
-        binding.toDate = dateFormat.format(viewModel.departure.value?.to)
-        binding.toTime = timeFormat.format(viewModel.departure.value?.to)
+        binding.toDate = dateFormat.format(viewModel._departure.value?.to)
+        binding.toTime = timeFormat.format(viewModel._departure.value?.to)
     }*/
     private fun setListener()
     {
@@ -122,7 +123,7 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         binding.onFromDateClik = View.OnClickListener {
             isLastFrom = true
             val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.to!!
+            calendar.time.time = viewModel.from
             DatePickerDialog(
                 context, this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)
             ).show()
@@ -130,13 +131,13 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         binding.onFromTimeClik = View.OnClickListener {
             isLastFrom = true
             val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.to!!
+            calendar.time.time = viewModel.from
             TimePickerDialog(context,this,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true).show()
         }
         binding.onToDateClik = View.OnClickListener {
             isLastFrom = false
             val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.from!!
+            calendar.time.time = viewModel.to
             DatePickerDialog(
                 context, this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)
             ).show()
@@ -145,8 +146,14 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         binding.onToTimeClik = View.OnClickListener {
             isLastFrom = false
             val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.from!!
+            calendar.time.time = viewModel.to
             TimePickerDialog(context,this,calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),true).show()
+        }
+    }
+    private fun setDepartureObserver()
+    {
+        viewModel.departure.observe(viewLifecycleOwner){departure ->
+            binding.invalidateAll()
         }
     }
 

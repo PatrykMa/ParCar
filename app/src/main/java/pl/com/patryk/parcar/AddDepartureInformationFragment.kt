@@ -18,8 +18,7 @@ import pl.com.patryk.parcar.utilites.InjectorUtils
 import java.text.SimpleDateFormat
 import androidx.databinding.adapters.TextViewBindingAdapter.setText
 import android.text.Editable
-
-
+import androidx.lifecycle.observe
 
 
 class AddDepartureInformationFragment : Fragment() {
@@ -46,6 +45,7 @@ class AddDepartureInformationFragment : Fragment() {
         binding = DataBindingUtil.inflate<FragmentAddDepartureInformationBinding>(inflater,R.layout.fragment_add_departure_information, container, false)
         setAdditionalInfoListener()
         setPlateListener()
+        setDepartureObserver()
         return binding.root
         // Inflate the layout for this fragment
         //binding = DataBindingUtil.inflate<FragmentAddDepartureTimeBinding>(inflater,R.layout.fragment_add_departure_information, container, false)
@@ -84,6 +84,14 @@ class AddDepartureInformationFragment : Fragment() {
         })
 
     }
+    private fun setDepartureObserver()
+    {
+        viewModel.departure.observe(viewLifecycleOwner){
+            binding.editTextPlate.setText(it.plate)
+            binding.textViewAdditionalInformation.setText(it.additionalInformatioin)
+        }
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
