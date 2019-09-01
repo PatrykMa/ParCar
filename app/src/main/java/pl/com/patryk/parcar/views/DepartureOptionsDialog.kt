@@ -66,6 +66,9 @@ class DepartureOptionsDialog: DialogFragment() {
             val direction = DepartureOptionsDialogDirections.actionDepartureOptionsDialogToAddDepartureFragment(args.departureId)
             findNavController().navigate(direction)
         }
+        binding.materialTextButtonCancel.setOnClickListener {
+            dismiss()
+        }
         // Do all the stuff to initialize your custom view
 
         return binding.root//inflater.inflate(R.layout.departure_dialog_fragment, container, false)
