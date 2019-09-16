@@ -18,8 +18,8 @@
                 android:title="Slideshow"/>
         <item
                 android:id="@+id/nav_paymentForms"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Tools"/>
+                android:icon="@drawable/ic_payment_form"
+                android:title="Formy płatności"/>
     </group>
 
     <item android:title="Communicate">
