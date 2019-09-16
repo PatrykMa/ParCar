@@ -6,18 +6,18 @@
     <group android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_departures"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="Import"/>
+                android:icon="@drawable/ic_departure"
+                android:title="Odjazdy"/>
         <item
-                android:id="@+id/nav_paymentForms"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Gallery"/>
+                android:id="@+id/nav_reservation"
+                android:icon="@drawable/ic_reservation"
+                android:title="Rezerwacje"/>
         <item
                 android:id="@+id/nav_reservationForms"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="Slideshow"/>
         <item
-                android:id="@+id/nav_reservation"
+                android:id="@+id/nav_paymentForms"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Tools"/>
     </group>
