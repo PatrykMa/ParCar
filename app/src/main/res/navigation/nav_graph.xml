@@ -14,6 +14,8 @@
         <action android:id="@+id/action_departureFragment_to_namedFragment" app:destination="@id/namedFragment"/>
         <action android:id="@+id/action_departureFragment_to_departureOptionsDialog"
                 app:destination="@id/departureOptionsDialog"/>
+        <action android:id="@+id/action_departureFragment_to_paymentMethodFragment"
+                app:destination="@id/paymentMethodFragment"/>
     </fragment>
 
     <fragment android:id="@+id/addDepartureFragment" android:name="pl.com.patryk.parcar.AddDepartureFragment"
@@ -35,5 +37,16 @@
         <action android:id="@+id/action_departureOptionsDialog_to_addDepartureFragment"
                 app:destination="@id/addDepartureFragment"/>
 
+    </dialog>
+    <fragment android:id="@+id/paymentMethodFragment" android:name="pl.com.patryk.parcar.PaymentMethodFragment"
+              android:label="payment_method_fragment" tools:layout="@layout/payment_method_fragment">
+        <action android:id="@+id/action_paymentMethodFragment_to_paymentFormDialogfragment"
+                app:destination="@id/paymentFormDialogfragment"/>
+    </fragment>
+    <dialog android:id="@+id/paymentFormDialogfragment"
+            android:name="pl.com.patryk.parcar.views.PaymentFormDialogFragment"
+            android:label="PaymentFormDialogfragment">
+        <argument android:name="name" app:argType="string"/>
+        <argument android:name="id" app:argType="integer"/>
     </dialog>
 </navigation>
