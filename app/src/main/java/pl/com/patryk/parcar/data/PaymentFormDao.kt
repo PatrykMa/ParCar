@@ -18,6 +18,9 @@ interface PaymentFormDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(payments: List<PaymentForm>)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(paymentForm: PaymentForm)
+
     @Delete
     fun delete(toDelete:PaymentForm)
 }

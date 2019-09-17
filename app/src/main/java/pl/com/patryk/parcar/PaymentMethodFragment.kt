@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.navigation.fragment.findNavController
 import pl.com.patryk.parcar.databinding.PaymentMethodFragmentBinding
 import pl.com.patryk.parcar.models.AddDepartureViewModel
 import pl.com.patryk.parcar.models.PaymentFormViewModel
@@ -35,6 +36,10 @@ class PaymentMethodFragment : Fragment() {
         val adapter = PaymentFormAdapter()
         binding.recycleViewPaymentForms.adapter = adapter
         subscribeUi(adapter)
+
+        binding.addButton.setOnClickListener{
+            findNavController().navigate(R.id.action_paymentMethodFragment_to_addPaymentFormDialogFragment)
+        }
 
         setHasOptionsMenu(true)
         return binding.root

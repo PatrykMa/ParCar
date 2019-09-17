@@ -13,4 +13,9 @@ class PaymentFormDialogFragmentViewModel internal constructor(paymentFormReposit
     {
         doAsync { paymentFormRepository.delete(paymentFormRepository.getPeymentForm(id.toInt())) }
     }
+
+    fun add(name:String)
+    {
+        doAsync { paymentFormRepository.insert(PaymentForm(name)) }
+    }
 }

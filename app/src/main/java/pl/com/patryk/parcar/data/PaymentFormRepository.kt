@@ -8,6 +8,8 @@ class PaymentFormRepository private constructor(private val paymentFormDao: Paym
 
     fun delete(paymentForm: PaymentForm) = paymentFormDao.delete(paymentForm)
 
+    fun insert(paymentForm: PaymentForm) = paymentFormDao.insert(paymentForm)
+
     companion object {
 
         // For Singleton instantiation

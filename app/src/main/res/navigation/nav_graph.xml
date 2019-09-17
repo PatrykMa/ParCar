@@ -42,6 +42,8 @@
               android:label="payment_method_fragment" tools:layout="@layout/payment_method_fragment">
         <action android:id="@+id/action_paymentMethodFragment_to_paymentFormDialogfragment"
                 app:destination="@id/paymentFormDialogfragment"/>
+        <action android:id="@+id/action_paymentMethodFragment_to_addPaymentFormDialogFragment"
+                app:destination="@id/addPaymentFormDialogFragment"/>
     </fragment>
     <dialog android:id="@+id/paymentFormDialogfragment"
             android:name="pl.com.patryk.parcar.views.PaymentFormDialogFragment"
@@ -49,4 +51,7 @@
         <argument android:name="name" app:argType="string"/>
         <argument android:name="id" app:argType="integer"/>
     </dialog>
+    <dialog android:id="@+id/addPaymentFormDialogFragment"
+            android:name="pl.com.patryk.parcar.views.AddPaymentFormDialogFragment"
+            android:label="AddPaymentFormDialogFragment"/>
 </navigation>

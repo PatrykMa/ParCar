@@ -29,6 +29,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="addPaymentFormDialogFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1188" />
+                            <option name="y" value="710" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="departureFragment">
                     <value>
                       <LayoutPositions>
@@ -103,8 +115,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="1031" />
-                            <option name="y" value="399" />
+                            <option name="x" value="967" />
+                            <option name="y" value="714" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -121,6 +133,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_paymentMethodFragment_to_addPaymentFormDialogFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_paymentMethodFragment_to_paymentFormDialogfragment">
                               <value>
                                 <LayoutPositions />
