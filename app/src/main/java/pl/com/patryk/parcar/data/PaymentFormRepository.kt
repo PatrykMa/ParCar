@@ -4,7 +4,9 @@ class PaymentFormRepository private constructor(private val paymentFormDao: Paym
 
     fun getPaymentsForm() = paymentFormDao.getPaymentsForms()
 
-    fun getPsymentForm(id:Int) = paymentFormDao.getPaymentForm(id)
+    fun getPeymentForm(id:Int) = paymentFormDao.getPaymentForm(id)
+
+    fun delete(paymentForm: PaymentForm) = paymentFormDao.delete(paymentForm)
 
     companion object {
 

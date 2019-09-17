@@ -1,4 +1,4 @@
-package pl.com.patryk.parcar
+package pl.com.patryk.parcar.models
 
 import androidx.lifecycle.ViewModel;
 

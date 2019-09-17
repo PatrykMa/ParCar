@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_departures"
+                android:id="@+id/departureFragment"
                 android:icon="@drawable/ic_departure"
                 android:title="Odjazdy"/>
         <item
@@ -17,7 +17,7 @@
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="Slideshow"/>
         <item
-                android:id="@+id/nav_paymentForms"
+                android:id="@+id/paymentMethodFragment"
                 android:icon="@drawable/ic_payment_form"
                 android:title="Formy płatności"/>
     </group>
@@ -25,9 +25,9 @@
     <item android:title="Communicate">
         <menu>
             <item
-                    android:id="@+id/nav_share"
+                    android:id="@+id/addDepartureFragment"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="Share"/>
+                    android:title="Dodaj Odjazd"/>
             <item
                     android:id="@+id/nav_send"
                     android:icon="@drawable/ic_menu_send"
