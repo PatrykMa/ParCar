@@ -1,10 +1,7 @@
 package pl.com.patryk.parcar.utilites
 
 import android.content.Context
-import pl.com.patryk.parcar.data.AppDatabase
-import pl.com.patryk.parcar.data.DepartureRepository
-import pl.com.patryk.parcar.data.PaymentFormRepository
-import pl.com.patryk.parcar.data.ReservationDao
+import pl.com.patryk.parcar.data.*
 import pl.com.patryk.parcar.models.*
 
 object InjectorUtils
@@ -16,12 +13,17 @@ object InjectorUtils
     }
     private fun getReservationrepository(context: Context):ReservationDao
     {
-        return AppDatabase.getInstance(context.applicationContext).rezervationDao()
+        return AppDatabase.getInstance(context.applicationContext).reservationDao()
     }
 
     private fun getPaymentFormRepository(context: Context):PaymentFormRepository
     {
         return  PaymentFormRepository.getInstance(AppDatabase.getInstance(context.applicationContext).paymentFormDao())
+    }
+
+    private fun getReservationFormRepository(context: Context):ReservationFormRepositor
+    {
+        return  ReservationFormRepositor.getInstance(AppDatabase.getInstance(context.applicationContext).reservationFormDao())
     }
 
 
@@ -43,7 +45,7 @@ object InjectorUtils
 
     fun provideReservationViewModelFacory(context: Context):ReservationViewModelFactory
     {
-        return ReservationViewModelFactory(AppDatabase.getInstance(context.applicationContext).rezervationDao())
+        return ReservationViewModelFactory(AppDatabase.getInstance(context.applicationContext).reservationDao())
     }
 
     fun provideAddReservationViewModelFactory(context: Context):AddReservationViewModelFactory
@@ -59,6 +61,11 @@ object InjectorUtils
     fun providePaymentFormDialogFragmentViewModel(context: Context):PaymentFormDialogFragmentViewModelFactory
     {
         return PaymentFormDialogFragmentViewModelFactory(getPaymentFormRepository(context))
+    }
+
+    fun provideReservationFormViewModelFactory(context: Context):ReservationFormViewModelFactory
+    {
+        return ReservationFormViewModelFactory(getReservationFormRepository(context))
     }
 
 

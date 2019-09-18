@@ -20,6 +20,10 @@
                 android:id="@+id/paymentMethodFragment"
                 android:icon="@drawable/ic_payment_form"
                 android:title="Formy płatności"/>
+        <item
+                android:id="@+id/reservationFormFragment"
+                android:icon="@drawable/ic_reservation_form"
+                android:title="Formy rezerwacji"/>
     </group>
 
     <item android:title="Communicate">

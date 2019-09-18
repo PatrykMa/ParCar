@@ -41,6 +41,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="addReservationFormDialogFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1784" />
+                            <option name="y" value="691" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="departureFragment">
                     <value>
                       <LayoutPositions>
@@ -68,6 +80,11 @@
                               </value>
                             </entry>
                             <entry key="action_departureFragment_to_paymentMethodFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_departureFragment_to_reservationFormFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -139,6 +156,44 @@
                               </value>
                             </entry>
                             <entry key="action_paymentMethodFragment_to_paymentFormDialogfragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="reservationFormEditDialogFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1982" />
+                            <option name="y" value="693" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="reservationFormFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1538" />
+                            <option name="y" value="411" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_reservationFormFragment_to_addReservationFormDialogFragment3">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_reservationFormFragment_to_reservationFormEditDialogFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

@@ -11,12 +11,13 @@ import androidx.work.WorkManager
 import pl.com.patryk.parcar.workers.InitDadabaseWorker
 
 
-const val DATABASE_NAME = "mrcar-db8"
-@Database(entities = [Departure::class,PaymentForm::class,Reservation::class],version = 1, exportSchema = false)
+const val DATABASE_NAME = "mrcar-db9"
+@Database(entities = [Departure::class,PaymentForm::class,Reservation::class,ReservationForm::class],version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun departureDao():DepartureDao
     abstract fun paymentFormDao():PaymentFormDao
-    abstract fun rezervationDao():ReservationDao
+    abstract fun reservationDao():ReservationDao
+    abstract fun reservationFormDao():ReservationFormDao
 
     companion object{
         //for singleton
