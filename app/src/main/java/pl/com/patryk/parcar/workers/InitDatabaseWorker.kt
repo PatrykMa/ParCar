@@ -9,13 +9,13 @@ import pl.com.patryk.parcar.data.AppDatabase
 import pl.com.patryk.parcar.data.PaymentForm
 import pl.com.patryk.parcar.data.ReservationForm
 
-class InitDadabaseWorker (
+class InitDatabaseWorker (
     context: Context,
     workerParams: WorkerParameters
 ) : CoroutineWorker(context, workerParams) {
 
 
-        private val TAG by lazy { InitDadabaseWorker::class.java.simpleName }
+        private val TAG by lazy { InitDatabaseWorker::class.java.simpleName }
 
         override suspend fun doWork(): Result = coroutineScope {
 

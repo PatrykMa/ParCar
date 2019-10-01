@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import pl.com.patryk.parcar.workers.InitDadabaseWorker
+import pl.com.patryk.parcar.workers.InitDatabaseWorker
 
 
 const val DATABASE_NAME = "mrcar-db11"
@@ -34,7 +33,7 @@ abstract class AppDatabase : RoomDatabase(){
                 .addCallback(object : RoomDatabase.Callback() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
-                        val request = OneTimeWorkRequestBuilder<InitDadabaseWorker>().build()
+                        val request = OneTimeWorkRequestBuilder<InitDatabaseWorker>().build()
                         WorkManager.getInstance(context).enqueue(request)
                     }
                 })
