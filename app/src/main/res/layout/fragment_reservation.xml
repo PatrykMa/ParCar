@@ -18,8 +18,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:clickable="true" android:id="@+id/floatingActionButton"/>
         <androidx.recyclerview.widget.RecyclerView
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/recycleView_departures">
+                android:layout_height="match_parent" android:id="@+id/recycleView_reservation">
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

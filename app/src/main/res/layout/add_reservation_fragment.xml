@@ -2,14 +2,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="reservation" type="pl.com.patryk.parcar.models.AddReservationViewModel"/>
+        <variable name="reservation" type="pl.com.patryk.parcar.data.Reservation"/>
+        <variable name="onFromDateClick" type="android.view.View.OnClickListener"/>
+        <variable name="onFromTimeClick" type="android.view.View.OnClickListener"/>
+        <import type="pl.com.patryk.parcar.TimeTranslator"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".AddReservationFragment">
         <TextView
-                android:text="@{reservation.date}"
+                android:onClick="@{onFromDateClick}"
+                android:text="@{TimeTranslator.toDateString(reservation.arrivalDate)}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView_date"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
@@ -18,7 +22,8 @@
                 android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.100000024"
                 app:layout_constraintHorizontal_bias="0.1" android:textSize="24sp"/>
         <TextView
-                android:text="@{reservation.time}"
+                android:text="@{TimeTranslator.toTimeString(reservation.arrivalDate)}"
+                android:onClick="@{onFromTimeClick}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_time"
@@ -41,5 +46,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView_time"
                 app:layout_constraintEnd_toEndOf="@+id/textView_time" android:layout_marginEnd="8dp"
                 android:layout_marginTop="16dp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true" app:srcCompat="@android:drawable/checkbox_on_background"
+                android:id="@+id/floatingActionButton_add" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

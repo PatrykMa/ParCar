@@ -73,4 +73,25 @@
         <argument android:name="name" app:argType="string"/>
         <argument android:name="id" app:argType="long"/>
     </dialog>
+    <dialog android:id="@+id/reservationDialogFragment"
+            android:name="pl.com.patryk.parcar.views.ReservationDialogFragment"
+            android:label="ReservationDialogFragment">
+        <argument android:name="id" app:argType="long"/>
+        <argument android:name="date" app:argType="string"/>
+        <action android:id="@+id/action_reservationDialogFragment_to_addReservationFragment"
+                app:destination="@id/addReservationFragment"/>
+    </dialog>
+    <fragment android:id="@+id/reservationFragment" android:name="pl.com.patryk.parcar.views.ReservationFragment"
+              android:label="ReservationFragment">
+        <action android:id="@+id/action_reservationFragment_to_reservationDialogFragment"
+                app:destination="@id/reservationDialogFragment"/>
+        <action android:id="@+id/action_reservationFragment_to_addReservationFragment"
+                app:destination="@id/addReservationFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addReservationFragment" android:name="pl.com.patryk.parcar.AddReservationFragment"
+              android:label="AddReservationFragment">
+        <argument android:name="id" app:argType="long" android:defaultValue="-1L"/>
+        <action android:id="@+id/action_addReservationFragment_to_reservationFragment"
+                app:destination="@id/reservationFragment"/>
+    </fragment>
 </navigation>

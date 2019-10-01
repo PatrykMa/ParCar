@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import org.jetbrains.anko.doAsync
 import pl.com.patryk.parcar.data.ReservationForm
-import pl.com.patryk.parcar.data.ReservationFormRepositor
+import pl.com.patryk.parcar.data.ReservationFormRepository
 
-class ReservationFormViewModel internal constructor(val reservationFormRepository: ReservationFormRepositor) : ViewModel() {
+class ReservationFormViewModel internal constructor(val reservationFormRepository: ReservationFormRepository) : ViewModel() {
 
     val reservationForm: LiveData<List<ReservationForm>> = reservationFormRepository.getReservatonsForms()
 

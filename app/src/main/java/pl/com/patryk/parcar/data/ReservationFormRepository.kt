@@ -1,6 +1,6 @@
 package pl.com.patryk.parcar.data
 
-class ReservationFormRepositor private constructor(private val reservationFormDao: ReservationFormDao){
+class ReservationFormRepository private constructor(private val reservationFormDao: ReservationFormDao){
 
     fun getReservatonsForms() = reservationFormDao.getReservationsForms()
 
@@ -13,11 +13,11 @@ class ReservationFormRepositor private constructor(private val reservationFormDa
     companion object {
 
         // For Singleton instantiation
-        @Volatile private var instance: ReservationFormRepositor? = null
+        @Volatile private var instance: ReservationFormRepository? = null
 
         fun getInstance(reservationFormDao: ReservationFormDao) =
             instance ?: synchronized(this) {
-                instance ?: ReservationFormRepositor(reservationFormDao).also { instance = it }
+                instance ?: ReservationFormRepository(reservationFormDao).also { instance = it }
             }
     }
 

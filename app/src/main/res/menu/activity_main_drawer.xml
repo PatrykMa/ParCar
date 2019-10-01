@@ -9,7 +9,7 @@
                 android:icon="@drawable/ic_departure"
                 android:title="Odjazdy"/>
         <item
-                android:id="@+id/nav_reservation"
+                android:id="@+id/reservationFragment"
                 android:icon="@drawable/ic_reservation"
                 android:title="Rezerwacje"/>
         <item

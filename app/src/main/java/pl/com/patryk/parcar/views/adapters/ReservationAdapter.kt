@@ -3,11 +3,14 @@ package pl.com.patryk.parcar.views.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import pl.com.patryk.parcar.DepartureFragmentDirections
 import pl.com.patryk.parcar.data.Reservation
 import pl.com.patryk.parcar.databinding.ListItemReservationBinding
+import pl.com.patryk.parcar.views.ReservationFragmentDirections
 
 class ReservationAdapter : ListAdapter<Reservation, ReservationAdapter.ViewHolder>(ReservationDiffCallback()){
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -25,8 +28,8 @@ class ReservationAdapter : ListAdapter<Reservation, ReservationAdapter.ViewHolde
     private fun createOnClickListener(reservation: Reservation): View.OnClickListener
     {
         return View.OnClickListener {
-           // val direction = DepartureFragmentDirections.actionDepartureFragmentToDepartureOptionsDialog()
-            //it.findNavController().navigate(direction)
+            val direction = ReservationFragmentDirections.actionReservationFragmentToReservationDialogFragment(reservation.id,reservation.fromDateToString())
+            it.findNavController().navigate(direction)
         }
     }
 

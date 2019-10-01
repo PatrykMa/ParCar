@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.navigation.fragment.findNavController
 
-import pl.com.patryk.parcar.R
 import pl.com.patryk.parcar.databinding.FragmentReservationBinding
 import pl.com.patryk.parcar.models.ReservationViewModel
 import pl.com.patryk.parcar.utilites.InjectorUtils
@@ -18,13 +18,14 @@ import pl.com.patryk.parcar.views.adapters.ReservationAdapter
 class ReservationFragment : Fragment() {
 
     private val viewModel: ReservationViewModel by viewModels {
-        InjectorUtils.provideReservationViewModelFacory(requireContext())
+        InjectorUtils.provideReservationViewModelFactory(requireContext())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,8 +37,13 @@ class ReservationFragment : Fragment() {
 
 
         val adapter = ReservationAdapter()
-        binding.recycleViewDepartures.adapter = adapter
+        binding.recycleViewReservation.adapter = adapter
         subscribeUi(adapter)
+
+        binding.floatingActionButton.setOnClickListener {
+            val destination = ReservationFragmentDirections.actionReservationFragmentToAddReservationFragment(-1)
+            findNavController().navigate(destination)
+        }
 
         setHasOptionsMenu(true)
         return binding.root

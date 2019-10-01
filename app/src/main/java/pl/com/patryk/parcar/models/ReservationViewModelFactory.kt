@@ -4,9 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import pl.com.patryk.parcar.data.DepartureRepository
 import pl.com.patryk.parcar.data.ReservationDao
+import pl.com.patryk.parcar.data.ReservationRepository
 
 class ReservationViewModelFactory (
-    private val repository: ReservationDao
+    private val repository: ReservationRepository
 )
     : ViewModelProvider.NewInstanceFactory() {
 

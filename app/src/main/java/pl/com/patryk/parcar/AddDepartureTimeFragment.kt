@@ -36,10 +36,7 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
     private var isLastFrom = true
     lateinit var binding:FragmentAddDepartureTimeBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super<Fragment>.onCreate(savedInstanceState)
 
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,21 +50,6 @@ class AddDepartureTimeFragment : Fragment(),DatePickerDialog.OnDateSetListener,T
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         val calendar = Calendar.getInstance()

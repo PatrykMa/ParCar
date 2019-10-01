@@ -11,19 +11,21 @@ object InjectorUtils
         return DepartureRepository.getInstance(
             AppDatabase.getInstance(context.applicationContext).departureDao())
     }
-    private fun getReservationrepository(context: Context):ReservationDao
-    {
-        return AppDatabase.getInstance(context.applicationContext).reservationDao()
-    }
+
 
     private fun getPaymentFormRepository(context: Context):PaymentFormRepository
     {
         return  PaymentFormRepository.getInstance(AppDatabase.getInstance(context.applicationContext).paymentFormDao())
     }
 
-    private fun getReservationFormRepository(context: Context):ReservationFormRepositor
+    private fun getReservationFormRepository(context: Context):ReservationFormRepository
     {
-        return  ReservationFormRepositor.getInstance(AppDatabase.getInstance(context.applicationContext).reservationFormDao())
+        return  ReservationFormRepository.getInstance(AppDatabase.getInstance(context.applicationContext).reservationFormDao())
+    }
+
+    private fun getReservationRepository(context: Context):ReservationRepository
+    {
+        return ReservationRepository.getInstance(AppDatabase.getInstance(context.applicationContext).reservationDao())
     }
 
 
@@ -43,14 +45,19 @@ object InjectorUtils
         return DepartureOptionsDialogFragmentViewModelFactory(getDepartureRepository(context))
     }
 
-    fun provideReservationViewModelFacory(context: Context):ReservationViewModelFactory
+    fun provideReservationViewModelFactory(context: Context):ReservationViewModelFactory
     {
-        return ReservationViewModelFactory(AppDatabase.getInstance(context.applicationContext).reservationDao())
+        return ReservationViewModelFactory(getReservationRepository(context))
+    }
+
+    fun provideReservationDialogViewModelFactory(context: Context):ReservationDialogViewModelFactory
+    {
+        return ReservationDialogViewModelFactory(getReservationRepository(context))
     }
 
     fun provideAddReservationViewModelFactory(context: Context):AddReservationViewModelFactory
     {
-        return AddReservationViewModelFactory(getReservationrepository(context))
+        return AddReservationViewModelFactory(getReservationRepository(context), getReservationFormRepository(context))
     }
 
     fun providePaymentFormViewModel(context: Context):PaymentFormViewModelFactory
