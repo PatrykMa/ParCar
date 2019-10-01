@@ -11,7 +11,7 @@ import androidx.work.WorkManager
 import pl.com.patryk.parcar.workers.InitDadabaseWorker
 
 
-const val DATABASE_NAME = "mrcar-db10"
+const val DATABASE_NAME = "mrcar-db11"
 @Database(entities = [Departure::class,PaymentForm::class,Reservation::class,ReservationForm::class],version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun departureDao():DepartureDao

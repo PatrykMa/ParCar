@@ -28,7 +28,7 @@ class ReservationAdapter : ListAdapter<Reservation, ReservationAdapter.ViewHolde
     private fun createOnClickListener(reservation: Reservation): View.OnClickListener
     {
         return View.OnClickListener {
-            val direction = ReservationFragmentDirections.actionReservationFragmentToReservationDialogFragment(reservation.id,reservation.fromDateToString())
+            val direction = ReservationFragmentDirections.actionReservationFragmentToReservationDialogFragment(reservation.id!!,reservation.fromDateToString())
             it.findNavController().navigate(direction)
         }
     }

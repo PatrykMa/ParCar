@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat
 @Entity(tableName = "_reservation")
 class Reservation (
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id")
-    var id:Long = -1,
+    var id:Long? = null,
     var quantit:Int =1,
     var reservationForm:String = "",
     var arrivalDate:Long = -1,

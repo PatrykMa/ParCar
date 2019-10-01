@@ -110,20 +110,20 @@ class AddReservationFragment : Fragment(),DatePickerDialog.OnDateSetListener, Ti
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.reservation.value!!.arrivalDate
+            calendar.timeInMillis = viewModel.reservation.value!!.arrivalDate
             calendar.set(Calendar.YEAR,year)
             calendar.set(Calendar.MONTH,month)
             calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
-            viewModel.reservation.value!!.arrivalDate = calendar.timeInMillis
+            viewModel.reservation.value!!.arrivalDate = calendar.time.time
         binding.invalidateAll()
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         val calendar = Calendar.getInstance()
-            calendar.time.time = viewModel.reservation.value!!.arrivalDate
+            calendar.timeInMillis = viewModel.reservation.value!!.arrivalDate
             calendar.set(Calendar.HOUR_OF_DAY,hourOfDay)
             calendar.set(Calendar.MINUTE,minute)
-            viewModel.reservation.value!!.arrivalDate = calendar.timeInMillis
+            viewModel.reservation.value!!.arrivalDate = calendar.time.time
         binding.invalidateAll()
     }
 
