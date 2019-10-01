@@ -5,7 +5,8 @@
             app:startDestination="@id/departureFragment">
 
     <fragment android:id="@+id/departureFragment" android:name="pl.com.patryk.parcar.DepartureFragment"
-              android:label="departure_fragment" tools:layout="@layout/departure_fragment"
+              android:label="Przyjazdy" tools:layout="@layout/departure_fragment"
+
     >
         <action android:id="@+id/action_departureFragment_to_addDepartureFragment"
                 app:destination="@id/addDepartureFragment">

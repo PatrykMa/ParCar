@@ -24,13 +24,14 @@ class DepartureFragment : NamedFragment() {
     private val viewModel: DepartureViewModel by viewModels {
         InjectorUtils.provideDepartureViewModelFactory(requireContext())
     }
+    lateinit var binding : DepartureFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding = DepartureFragmentBinding.inflate(inflater, container, false)
+        binding = DepartureFragmentBinding.inflate(inflater, container, false)
         context ?: return binding.root
 
 
@@ -57,13 +58,16 @@ class DepartureFragment : NamedFragment() {
 
 
     private fun subscribeUi(adapter: DepartureAdapter) {
-        viewModel.departures.observe(viewLifecycleOwner) { plants ->
+        viewModel.departures.observe(viewLifecycleOwner) { departures ->
             /**
              *  Plant may return null, but the [observe] extension function assumes it will not be null.
-             *  So there will be a warning（Condition `plants != null` is always `true`） here.
+             *  So there will be a warning（Condition `departures != null` is always `true`） here.
              *  I am not sure if the database return data type should be defined as nullable, Such as `LiveData<List<Plant>?>` .
              */
-            if (plants != null) adapter.submitList(plants)
+            if (departures != null) {
+                binding.textViewEmptyRecycler.visibility = if(departures.isNotEmpty()) View.GONE else View.VISIBLE
+                adapter.submitList(departures)
+            }
         }
     }
 }

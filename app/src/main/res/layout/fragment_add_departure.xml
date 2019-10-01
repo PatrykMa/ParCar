@@ -14,11 +14,13 @@
 
         </androidx.viewpager.widget.ViewPager>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:src="@android:drawable/alert_dark_frame"
+                android:src="@android:drawable/ic_input_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true" android:id="@+id/fab_addDeparture" android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent" style="@style/AppTheme"
+                app:backgroundTint="@color/colorSecondary"
+        />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
