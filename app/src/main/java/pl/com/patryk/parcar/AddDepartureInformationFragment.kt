@@ -18,6 +18,7 @@ import pl.com.patryk.parcar.utilites.InjectorUtils
 import java.text.SimpleDateFormat
 import androidx.databinding.adapters.TextViewBindingAdapter.setText
 import android.text.Editable
+import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.observe
 
 
@@ -29,13 +30,19 @@ class AddDepartureInformationFragment : Fragment() {
     lateinit var binding:FragmentAddDepartureInformationBinding
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onResume() {
+        super.onResume()
+        val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        binding.editTextPlate.requestFocus()
+        imm.showSoftInput(binding.editTextPlate, InputMethodManager.SHOW_IMPLICIT)
+        //imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-       // viewModel = ViewModelProviders.of(this).get(AddDepartureViewModel::class.java)
+    override fun onPause() {
+        super.onPause()
+        val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        imm!!.hideSoftInputFromWindow(binding.editTextPlate.windowToken, 0)
+        imm!!.hideSoftInputFromWindow(binding.textViewAdditionalInformation.windowToken, 0)
     }
 
     override fun onCreateView(

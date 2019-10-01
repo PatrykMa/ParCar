@@ -11,12 +11,16 @@ import androidx.databinding.DataBindingUtil
 import pl.com.patryk.parcar.databinding.FragmentAddDeparturePaymentBinding
 import pl.com.patryk.parcar.models.AddDepartureViewModel
 import android.text.Editable
+import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import pl.com.patryk.parcar.utilites.InjectorUtils
 import android.widget.AdapterView.OnItemSelectedListener
+import android.view.inputmethod.InputMethodManager.HIDE_IMPLICIT_ONLY
+import android.view.inputmethod.InputMethodSubtype
+import androidx.core.content.ContextCompat.getSystemService
 
 
 
@@ -38,6 +42,16 @@ class AddDeparturePaymentFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         setDepartureObserver()
+        val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        binding.editTextPrice.requestFocus()
+        imm.showSoftInput(binding.editTextPrice, InputMethodManager.SHOW_IMPLICIT)
+        //imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        imm!!.hideSoftInputFromWindow(binding.editTextPrice.windowToken, 0)
     }
 
     override fun onCreateView(
