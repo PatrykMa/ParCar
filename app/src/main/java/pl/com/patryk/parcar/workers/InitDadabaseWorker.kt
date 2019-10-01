@@ -7,6 +7,7 @@ import androidx.work.WorkerParameters
 import kotlinx.coroutines.coroutineScope
 import pl.com.patryk.parcar.data.AppDatabase
 import pl.com.patryk.parcar.data.PaymentForm
+import pl.com.patryk.parcar.data.ReservationForm
 
 class InitDadabaseWorker (
     context: Context,
@@ -21,6 +22,7 @@ class InitDadabaseWorker (
             try {
                     val database = AppDatabase.getInstance(applicationContext)
                     database.paymentFormDao().insertAll(listOf(PaymentForm("Gotówka")))
+                    database.reservationFormDao().insert(ReservationForm(null,"Prywatnie"))
 
                     Result.success()
 
