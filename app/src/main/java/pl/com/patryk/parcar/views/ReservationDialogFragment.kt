@@ -23,7 +23,7 @@ class ReservationDialogFragment : DialogFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val binding = DataBindingUtil.inflate<ReservationDialogFragmentBinding>(inflater,
-            R.layout.reservation_form_edit_dialog_fragment, container, false)
+            R.layout.reservation_dialog_fragment, container, false)
         binding.date =args.date
         binding.materialTextButtonDelete.setOnClickListener {
 
