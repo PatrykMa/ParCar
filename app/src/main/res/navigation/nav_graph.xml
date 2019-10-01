@@ -22,7 +22,7 @@
     </fragment>
 
     <fragment android:id="@+id/addDepartureFragment" android:name="pl.com.patryk.parcar.AddDepartureFragment"
-              android:label="fragment_add_departure" tools:layout="@layout/fragment_add_departure">
+              android:label="Dodaj Odjzad" tools:layout="@layout/fragment_add_departure">
 
         <action android:id="@+id/action_addDepartureFragment_to_departureFragment"
                 app:destination="@id/departureFragment"
@@ -42,7 +42,7 @@
 
     </dialog>
     <fragment android:id="@+id/paymentMethodFragment" android:name="pl.com.patryk.parcar.PaymentMethodFragment"
-              android:label="payment_method_fragment" tools:layout="@layout/payment_method_fragment">
+              android:label="Formy Płatności" tools:layout="@layout/payment_method_fragment">
         <action android:id="@+id/action_paymentMethodFragment_to_paymentFormDialogfragment"
                 app:destination="@id/paymentFormDialogfragment"/>
         <action android:id="@+id/action_paymentMethodFragment_to_addPaymentFormDialogFragment"
@@ -59,7 +59,7 @@
             android:label="AddPaymentFormDialogFragment"/>
     <fragment android:id="@+id/reservationFormFragment"
               android:name="pl.com.patryk.parcar.views.ReservationFormFragment"
-              android:label="ReservationFormFragment">
+              android:label="Formy Rezerwacji">
         <action android:id="@+id/action_reservationFormFragment_to_addReservationFormDialogFragment3"
                 app:destination="@id/addReservationFormDialogFragment"/>
         <action android:id="@+id/action_reservationFormFragment_to_reservationFormEditDialogFragment"
@@ -67,7 +67,7 @@
     </fragment>
     <dialog android:id="@+id/addReservationFormDialogFragment"
               android:name="pl.com.patryk.parcar.views.AddReservationFormDialogFragment"
-              android:label="AddReservationFormDialogFragment"/>
+              android:label="Dodaj formę rezerwacji"/>
     <dialog android:id="@+id/reservationFormEditDialogFragment"
               android:name="pl.com.patryk.parcar.views.ReservationFormEditDialogFragment"
               android:label="ReservationFormEditDialogFragment">
@@ -83,14 +83,14 @@
                 app:destination="@id/addReservationFragment"/>
     </dialog>
     <fragment android:id="@+id/reservationFragment" android:name="pl.com.patryk.parcar.views.ReservationFragment"
-              android:label="ReservationFragment">
+              android:label="Rezerwacje">
         <action android:id="@+id/action_reservationFragment_to_reservationDialogFragment"
                 app:destination="@id/reservationDialogFragment"/>
         <action android:id="@+id/action_reservationFragment_to_addReservationFragment"
                 app:destination="@id/addReservationFragment"/>
     </fragment>
     <fragment android:id="@+id/addReservationFragment" android:name="pl.com.patryk.parcar.AddReservationFragment"
-              android:label="AddReservationFragment">
+              android:label="Dodaj Rezerwację">
         <argument android:name="id" app:argType="long" android:defaultValue="-1L"/>
         <action android:id="@+id/action_addReservationFragment_to_reservationFragment"
                 app:destination="@id/reservationFragment"/>
