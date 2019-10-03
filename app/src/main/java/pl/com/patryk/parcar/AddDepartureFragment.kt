@@ -66,6 +66,17 @@ class AddDepartureFragment : Fragment() {
                 Information -> AddDepartureInformationFragment()
             }}
         companion object{
+
+            fun getTitle(pos:FragmentKind): String
+            {
+                return when(pos)
+                {
+                    Time-> {"Czas"}
+                    Payment-> {"Płaność"}
+                    Information->{"Informacje"}
+                }
+            }
+
             operator fun get(pos: Int):FragmentKind
             {
                 values().forEach {
@@ -88,6 +99,10 @@ class AddDepartureFragment : Fragment() {
 
         override fun getCount(): Int {
            return FragmentKind.count
+        }
+
+        override fun getPageTitle(position: Int): CharSequence? {
+            return FragmentKind.getTitle(FragmentKind[position])
         }
     }
 }
