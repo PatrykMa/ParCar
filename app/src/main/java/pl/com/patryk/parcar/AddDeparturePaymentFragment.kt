@@ -22,8 +22,7 @@ import android.widget.AdapterView.OnItemSelectedListener
 import android.view.inputmethod.InputMethodManager.HIDE_IMPLICIT_ONLY
 import android.view.inputmethod.InputMethodSubtype
 import androidx.core.content.ContextCompat.getSystemService
-
-
+import java.lang.Exception
 
 
 class AddDeparturePaymentFragment : Fragment() {
@@ -105,7 +104,7 @@ class AddDeparturePaymentFragment : Fragment() {
         binding.editTextPrice.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
-                viewModel.price = s.toString().toInt()}
+                viewModel.price = try{s.toString().toInt()} catch (e:Exception){0}}
 
             override fun beforeTextChanged( s: CharSequence, start: Int, count: Int, after: Int) {
             }
