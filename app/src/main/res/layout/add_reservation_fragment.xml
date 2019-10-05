@@ -12,6 +12,7 @@
             android:layout_height="match_parent"
             tools:context=".AddReservationFragment">
         <TextView
+                android:drawableLeft="@drawable/ic_calendar_today_24px"
                 android:text="Data Przyjazdu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,6 +39,7 @@
                     app:layout_constraintHorizontal_bias="0.1" android:textSize="24sp"/>
         </androidx.cardview.widget.CardView>
         <TextView
+                android:drawableLeft="@drawable/ic_access_time_24px"
                 android:text="Godzina Przyjazdu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,6 +63,8 @@
                     android:textSize="24sp"/>
         </androidx.cardview.widget.CardView>
         <TextView
+                android:drawableLeft="@drawable/ic_reservation_form"
+
                 android:text="Forma Rezerwacji"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" android:id="@+id/textView12"
@@ -80,6 +84,7 @@
             />
         </androidx.cardview.widget.CardView>
         <Switch
+                android:drawableLeft="@drawable/ic_attach_money_24px"
                 android:text="Opłacono"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

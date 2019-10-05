@@ -13,10 +13,6 @@
                 android:icon="@drawable/ic_reservation"
                 android:title="Rezerwacje"/>
         <item
-                android:id="@+id/nav_reservationForms"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Slideshow"/>
-        <item
                 android:id="@+id/paymentMethodFragment"
                 android:icon="@drawable/ic_payment_form"
                 android:title="Formy płatności"/>

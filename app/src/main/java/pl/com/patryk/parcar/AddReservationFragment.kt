@@ -102,7 +102,7 @@ class AddReservationFragment : Fragment(),DatePickerDialog.OnDateSetListener, Ti
         viewModel.reservationForm.observe(viewLifecycleOwner){
             val dataAdapter = ArrayAdapter<String>(
                 context,
-                android.R.layout.simple_spinner_item, it
+                R.layout.spinner_adapter_basic, it
             )
             binding.spinnerReservationForms.adapter = dataAdapter
         }
