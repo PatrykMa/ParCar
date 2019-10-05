@@ -12,32 +12,45 @@
                 type="pl.com.patryk.parcar.data.Departure"/>
     </data>
 
-    <LinearLayout
-            android:orientation="horizontal"
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" android:layout_weight="10" android:elevation="8dp"
+            android:layout_margin="8dp">
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:layout_weight="10">
-            <TextView
-                    android:text="@{departure.getToDate()}"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/text_date"/>
-            <TextView
-                    android:text="@{departure.plate}"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:id="@+id/text_plate"/>
-        </LinearLayout>
-        <TextView
-                android:text="@={`` + departure.price}"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" android:id="@+id/text_price" android:layout_weight="9"
-                android:textAlignment="center" android:textAllCaps="false" android:gravity="center"/>
-        <ImageButton
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center_vertical">
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_edit"
-                android:id="@+id/imageButton_edit" android:layout_weight="1"/>
-    </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="10">
+                <TextView
+                        android:text="@{departure.getToDate()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/text_date"
+                        android:textSize="@dimen/big_size" android:gravity="center_horizontal"/>
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                <TextView
+                        android:text="@{departure.plate}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/text_plate"
+                        android:gravity="center_horizontal"/>
+            </LinearLayout>
+            <TextView
+                    android:text="@{departure.price + `zł`}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/text_price" android:layout_weight="9"
+                    android:textAlignment="center" android:textAllCaps="false" android:gravity="center"
+                    android:textSize="@dimen/big_size"/>
+            <ImageButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_more_ver"
+                    android:id="@+id/imageButton_edit" android:layout_weight="1"
+                    android:backgroundTint="@color/design_default_color_background"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
