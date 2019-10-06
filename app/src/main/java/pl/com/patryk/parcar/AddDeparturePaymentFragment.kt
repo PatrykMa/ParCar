@@ -67,6 +67,7 @@ class AddDeparturePaymentFragment : Fragment() {
         subscribeUI()
         setPriceChangeListener()
         setSpinnerListener()
+        setIsPayListener()
 
         return binding.root
 
@@ -99,6 +100,13 @@ class AddDeparturePaymentFragment : Fragment() {
             }
     }
 
+    fun setIsPayListener()
+    {
+        binding.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+            viewModel.departure.value!!.isPaid = isChecked
+        }
+    }
+
     fun setPriceChangeListener()
     {
         binding.editTextPrice.addTextChangedListener(object : TextWatcher {
@@ -119,6 +127,7 @@ class AddDeparturePaymentFragment : Fragment() {
     {
         viewModel.departure.observe(viewLifecycleOwner){
             binding.price = it.price!!.toString()
+            binding.checkBox.isChecked = it.isPaid
             binding.spinnerPaymentFormList.setSelection(viewModel.paymentForms.value!!.indexOf(it.paymentForm))
             //toDO set isPay
         }
