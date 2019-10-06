@@ -9,10 +9,10 @@
             android:layout_height="match_parent">
 
         <TextView
-                android:text="Dodaj formę Rezerwacji"
+                android:text="Dodaj Formę Rezerwacji"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/textView6" android:textSize="32sp"
-                android:layout_margin="4dp"/>
+                android:layout_margin="4dp" android:gravity="center"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -22,12 +22,14 @@
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent" android:paddingTop="16dp" android:paddingBottom="40dp">
             <Button
                     android:text="Anuluj"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/button_cancel" android:layout_weight="1"
-                    android:layout_margin="4dp"/>
+                    android:layout_margin="4dp" android:background="@color/design_default_color_background"
+                    android:backgroundTint="@color/design_default_color_background"
+                    android:textColor="@color/design_default_color_on_secondary"/>
             <Button
                     android:text="Dodaj"
                     android:layout_width="wrap_content"

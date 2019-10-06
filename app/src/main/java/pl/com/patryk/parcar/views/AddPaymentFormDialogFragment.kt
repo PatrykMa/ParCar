@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
@@ -32,6 +33,28 @@ class AddPaymentFormDialogFragment : DialogFragment() {
         binding.buttonCancel.setOnClickListener {
             dismiss()
         }
+
+        //setStyle(DialogFragment.STYLE_NORMAL, R.style.Dialog_FullScreen)
+        getDialog()!!.getWindow()!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
         return binding.root//inflater.inflate(R.layout.departure_dialog_fragment, container, false)
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+    }
+
+
+    override fun onResume() {
+        // Get existing layout params for the window
+        val params = getDialog()!!.getWindow().getAttributes()
+        // Assign window properties to fill the parent
+        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog!!.window!!.attributes = params as android.view.WindowManager.LayoutParams
+
+        super.onResume()
+    }
+
+
+
 }

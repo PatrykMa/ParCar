@@ -22,16 +22,24 @@
                 android:title="Formy rezerwacji"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Dodawanie">
         <menu>
             <item
                     android:id="@+id/addDepartureFragment"
-                    android:icon="@drawable/ic_menu_share"
+                    android:icon="@drawable/ic_vehicle_add"
                     android:title="Dodaj Odjazd"/>
             <item
-                    android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="Send"/>
+                    android:id="@+id/addReservationFragment"
+                    android:icon="@drawable/ic_reservation"
+                    android:title="Dodaj Rezerwację"/>
+            <item
+                    android:id="@+id/addPaymentFormDialogFragment"
+                    android:icon="@drawable/ic_payment_form"
+                    android:title="Dodaj Formę Płatności"/>
+            <item
+                    android:id="@+id/addReservationFormDialogFragment"
+                    android:icon="@drawable/ic_reservation_form"
+                    android:title="Dodaj Formę Rezerwację"/>
         </menu>
     </item>
 

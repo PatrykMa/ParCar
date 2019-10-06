@@ -18,19 +18,20 @@
                 android:drawableLeft="@drawable/ic_flight_land_24px"
                 android:text="Przyjazd"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout2" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="8dp" android:textSize="@dimen/big_size"/>
+                android:layout_height="wrap_content" android:id="@+id/textView4"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:textSize="@dimen/big_size" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_weight="4"
-                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.25"
-                android:id="@+id/linearLayout2">
+                android:layout_marginEnd="8dp"
+                android:layout_weight="4"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:id="@+id/linearLayout2" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
             <androidx.cardview.widget.CardView
                     android:onClick="@{onFromDateClik}"
                     android:layout_width="wrap_content"
@@ -90,8 +91,7 @@
                 android:layout_marginEnd="8dp"
                 android:id="@+id/linearLayout4"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView5"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.060000002">
+        >
             <androidx.cardview.widget.CardView
                     android:onClick="@{onToDateClik}"
                     android:layout_width="wrap_content"
