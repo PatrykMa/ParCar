@@ -19,9 +19,9 @@
                     android:layout_height="wrap_content" android:id="@+id/textView_date" android:layout_weight="5"
                     android:layout_margin="8dp" android:textSize="20sp"/>
             <TextView
-                    android:text="@{reservation.getReservationFormName()}"
+                    android:text="@{TimeTranslator.toTimeString(reservation.arrivalDate)}"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView_payment" android:layout_weight="5"
+                    android:layout_height="wrap_content" android:id="@+id/textView_time" android:layout_weight="5"
                     android:layout_margin="8dp" android:textSize="20sp"/>
             <ImageButton
                     android:layout_width="wrap_content"
