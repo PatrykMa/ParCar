@@ -3,39 +3,36 @@
     <data>
         <variable name="paymentForm" type="pl.com.patryk.parcar.data.PaymentForm"/>
     </data>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:padding="4dp">
 
-        <androidx.cardview.widget.CardView
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:elevation="8dp" android:layout_margin="8dp">
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:elevation="2dp">
+                android:layout_height="wrap_content" android:baselineAligned="false">
             <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:baselineAligned="false">
-                <LinearLayout
-                        android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="4">
+                <TextView
+                        android:text="@{paymentForm.name}"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:layout_weight="4">
-                    <TextView
-                            android:text="@{paymentForm.name}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/textView_name" android:textSize="32sp"
-                    />
-                </LinearLayout>
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:layout_weight="1" android:gravity="right"
-                        android:paddingRight="4dp">
-                    <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_more_ver"
-                            android:id="@+id/button_edit"/>
-                </LinearLayout>
+                        android:layout_height="wrap_content" android:id="@+id/textView_name" android:textSize="32sp"
+                />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:gravity="right"
+                    android:paddingRight="4dp">
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" app:srcCompat="@drawable/ic_more_ver"
+                        android:id="@+id/button_edit"
+                        android:backgroundTint="@color/design_default_color_background"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
