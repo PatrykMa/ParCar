@@ -20,6 +20,9 @@ import androidx.databinding.adapters.TextViewBindingAdapter.setText
 import android.text.Editable
 import android.view.inputmethod.InputMethodManager
 import androidx.lifecycle.observe
+import android.text.InputFilter
+
+
 
 
 class AddDepartureInformationFragment : Fragment() {
@@ -53,6 +56,7 @@ class AddDepartureInformationFragment : Fragment() {
         setAdditionalInfoListener()
         setPlateListener()
         setDepartureObserver()
+        binding.editTextPlate.filters = arrayOf<InputFilter>(InputFilter.AllCaps())
         return binding.root
         // Inflate the layout for this fragment
         //binding = DataBindingUtil.inflate<FragmentAddDepartureTimeBinding>(inflater,R.layout.fragment_add_departure_information, container, false)

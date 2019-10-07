@@ -43,6 +43,7 @@
                         android:ems="10"
                         android:id="@+id/editText_plate"
                         android:hint="Tablice"
+                        app:textAllCaps="true"
                         android:layout_weight="1"/>
                 <ImageButton
                         android:src="@drawable/ic_menu_camera"
