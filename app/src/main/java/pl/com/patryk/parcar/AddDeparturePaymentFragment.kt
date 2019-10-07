@@ -102,7 +102,7 @@ class AddDeparturePaymentFragment : Fragment() {
 
     fun setIsPayListener()
     {
-        binding.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+        binding.switchPay.setOnCheckedChangeListener { buttonView, isChecked ->
             viewModel.departure.value!!.isPaid = isChecked
         }
     }
@@ -127,7 +127,7 @@ class AddDeparturePaymentFragment : Fragment() {
     {
         viewModel.departure.observe(viewLifecycleOwner){
             binding.price = it.price!!.toString()
-            binding.checkBox.isChecked = it.isPaid
+            binding.switchPay.isChecked = it.isPaid
             binding.spinnerPaymentFormList.setSelection(viewModel.paymentForms.value!!.indexOf(it.paymentForm))
             //toDO set isPay
         }
