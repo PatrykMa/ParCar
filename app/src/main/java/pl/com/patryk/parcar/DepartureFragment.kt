@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
@@ -54,6 +55,10 @@ class DepartureFragment : NamedFragment() {
         addButton.setOnClickListener {
            findNavController().navigate(R.id.action_departureFragment_to_addDepartureFragment)
     }
+        val imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        //imm.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        imm.hideSoftInputFromWindow(view!!.windowToken, 0);
     }
 
 
