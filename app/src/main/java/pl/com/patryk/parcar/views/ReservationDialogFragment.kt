@@ -9,6 +9,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 import pl.com.patryk.parcar.R
 import pl.com.patryk.parcar.databinding.ReservationDialogFragmentBinding
 import pl.com.patryk.parcar.models.ReservationDialogViewModel
@@ -29,6 +31,16 @@ class ReservationDialogFragment : DialogFragment() {
 
             viewModel.delete(args.id)
             dismiss()
+        }
+        binding.materialTextButtonArrive.setOnClickListener {
+            doAsync {
+                val res =viewModel.getReservation(args.id)
+                uiThread {
+                    val direction = ReservationDialogFragmentDirections
+                        .actionReservationDialogFragmentToAddDepartureFragment(-1, res.arrivalDate,res.isPaid)
+                    findNavController().navigate(direction)
+                }
+            }
         }
         binding.materialTextButtonEdit.setOnClickListener {
             val direction = ReservationDialogFragmentDirections.actionReservationDialogFragmentToAddReservationFragment(args.id)

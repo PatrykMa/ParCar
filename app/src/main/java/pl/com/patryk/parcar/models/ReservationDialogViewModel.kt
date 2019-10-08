@@ -14,4 +14,9 @@ class ReservationDialogViewModel (val reservationRepository: ReservationReposito
     {
         doAsync { reservationRepository.delete(reservationRepository.getreservaton(id))}
     }
+
+    fun getReservation(id:Long):Reservation
+    {
+        return reservationRepository.getreservaton(id)
+    }
 }

@@ -84,7 +84,7 @@ class AddDepartureViewModel internal constructor(
 
     fun setDeparture(id:Int)
     {
-        if (id == 0)
+        if (id <= 0)
             initDeparture()
         else
         doAsync {

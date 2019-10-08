@@ -29,6 +29,8 @@
                 app:popUpTo="@+id/addDepartureFragment"
                 app:popUpToInclusive="true"/>
         <argument android:name="departureId" app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="arriveTime" app:argType="long" android:defaultValue="-1L"/>
+        <argument android:name="isPayed" app:argType="boolean" android:defaultValue="false"/>
     </fragment>
     <fragment android:id="@+id/namedFragment" android:name="pl.com.patryk.parcar.views.NamedFragment"
               android:label="NamedFragment"/>
@@ -81,6 +83,8 @@
         <argument android:name="date" app:argType="string"/>
         <action android:id="@+id/action_reservationDialogFragment_to_addReservationFragment"
                 app:destination="@id/addReservationFragment"/>
+        <action android:id="@+id/action_reservationDialogFragment_to_addDepartureFragment"
+                app:destination="@id/addDepartureFragment"/>
     </dialog>
     <fragment android:id="@+id/reservationFragment" android:name="pl.com.patryk.parcar.views.ReservationFragment"
               android:label="Rezerwacje">
