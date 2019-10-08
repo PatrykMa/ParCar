@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import pl.com.patryk.parcar.databinding.FragmentAddDeparturePaymentBinding
 import pl.com.patryk.parcar.models.AddDepartureViewModel
 import android.text.Editable
+import android.util.Log
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
@@ -129,7 +130,9 @@ class AddDeparturePaymentFragment : Fragment() {
             binding.price = it.price!!.toString()
             binding.switchPay.isChecked = it.isPaid
             binding.spinnerPaymentFormList.setSelection(viewModel.paymentForms.value!!.indexOf(it.paymentForm))
-            //toDO set isPay
+            binding.isPay = it.isPaid
+            Log.d("price",it.isPaid.toString())
+            binding.invalidateAll()
         }
         var x =0
     }

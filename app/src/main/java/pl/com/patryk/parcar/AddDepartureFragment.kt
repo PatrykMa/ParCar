@@ -31,8 +31,8 @@ class AddDepartureFragment : Fragment() {
         viewModel.setDeparture(args.departureId)
         if(args.departureId <= 0 && args.arriveTime > 0)
         {
-            viewModel.departure.value!!.isPaid = args.isPayed
-            viewModel.departure.value!!.from = args.arriveTime
+            viewModel.isPaid = args.isPayed
+            viewModel.from = args.arriveTime
         }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_departure, container, false)

@@ -64,6 +64,10 @@ class AddDepartureViewModel internal constructor(
     var paymentForm:String
         get() {return _departure.paymentForm?: ""}
         set(value) {_departure.paymentForm = value }
+    var isPaid:Boolean
+        get(){return  _departure.isPaid}
+        set(value){
+            _departure.isPaid = value}
 
 
     val paymentForms:LiveData<Array<String>> = Transformations.map(database.paymentFormDao().getPaymentsForms(), ::t);

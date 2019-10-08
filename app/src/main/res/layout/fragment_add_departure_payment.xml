@@ -78,6 +78,7 @@
             <Switch
                     android:drawableLeft="@drawable/ic_hand_dollar"
                     android:text="Zapłacono"
+                    android:checked="@{isPay}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/switch_pay" android:gravity="fill"
                     android:textSize="@dimen/big_size"/>

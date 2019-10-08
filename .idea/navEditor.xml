@@ -197,6 +197,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_reservationDialogFragment_to_addDepartureFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_reservationDialogFragment_to_addReservationFragment">
                               <value>
                                 <LayoutPositions />

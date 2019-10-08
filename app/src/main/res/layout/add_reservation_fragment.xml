@@ -86,6 +86,7 @@
         <Switch
                 android:drawableLeft="@drawable/ic_attach_money_24px"
                 android:text="Opłacono"
+                android:checked="@{reservation.paid}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/switch2"
