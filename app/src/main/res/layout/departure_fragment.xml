@@ -9,7 +9,7 @@
             android:layout_height="match_parent"
             tools:context=".DepartureFragment">
         <TextView
-                android:text="Brak Przyjazdów"
+                android:text="Brak Odjazdów"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView_emptyRecycler"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
