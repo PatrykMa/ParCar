@@ -17,6 +17,7 @@ import pl.com.patryk.parcar.views.adapters.ReservationAdapter
 
 class ReservationFragment : Fragment() {
 
+    lateinit var binding : FragmentReservationBinding
     private val viewModel: ReservationViewModel by viewModels {
         InjectorUtils.provideReservationViewModelFactory(requireContext())
     }
@@ -32,7 +33,7 @@ class ReservationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = FragmentReservationBinding.inflate(inflater, container, false)
+        binding = FragmentReservationBinding.inflate(inflater, container, false)
         context ?: return binding.root
 
 
@@ -51,8 +52,13 @@ class ReservationFragment : Fragment() {
 
     private fun subscribeUi(adapter: ReservationAdapter) {
         viewModel.reservations.observe(viewLifecycleOwner) {
-            if (it != null)
+            if (it != null) {
+                binding.textViewEmptyRecycler.visibility = if(it.isNotEmpty()) View.GONE else View.VISIBLE
                 adapter.submitList(it)
+            }
+            else{
+                binding.textViewEmptyRecycler.visibility = View.GONE
+            }
         }
     }
 

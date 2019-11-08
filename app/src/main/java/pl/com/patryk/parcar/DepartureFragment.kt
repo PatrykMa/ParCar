@@ -73,6 +73,9 @@ class DepartureFragment : NamedFragment() {
                 binding.textViewEmptyRecycler.visibility = if(departures.isNotEmpty()) View.GONE else View.VISIBLE
                 adapter.submitList(departures)
             }
+            else{
+                binding.textViewEmptyRecycler.visibility =View.GONE
+            }
         }
     }
 }
